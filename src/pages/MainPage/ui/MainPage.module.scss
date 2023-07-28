@@ -1,0 +1,17 @@
+.main_page__wrapper {
+  margin: 0 0 104px;
+
+  .time_laps__slider__wrapper {
+    margin: 0 0 56px;
+  }
+}
+
+@media (max-width: 500px) {
+  .main_page__wrapper {
+    margin: 0 0 50px;
+
+    .time_laps__slider__wrapper {
+      margin: 0;
+    }
+  }
+}

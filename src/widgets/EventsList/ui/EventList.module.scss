@@ -1,0 +1,148 @@
+.swiper__btn__wrapper {
+  position: absolute;
+  z-index: 9999;
+
+  &.back {
+    left: 0;
+    height: 100%;
+  }
+
+  &.next {
+    right: 0;
+    height: 100%;
+  }
+
+  .swiper__btn {
+    background: var(--backgroud-color);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:disabled {
+      opacity: 0;
+      cursor: auto;
+    }
+
+    &:disabled + .swiper__btn__wrapper {
+      opacity: 1;
+      background: transparent;
+    }
+
+    .arrow__back,
+    .arrow__next {
+      position: relative;
+      cursor: pointer;
+      filter: drop-shadow(0px 0px 15px rgba(56, 119, 238, 0.10));
+      background: var(--color-white);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+    }
+
+    .arrow__back {
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        height: 2px;
+        width: 8px;
+        background: var(--color-blue);
+      }
+
+      &::before {
+        transform: rotate(135deg);
+        top: 42%;
+        left: 40%;
+      }
+
+      &::after {
+        transform: rotate(45deg);
+        left: 40%;
+        top: 53%;
+      }
+    }
+
+    .arrow__next {
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        height: 2px;
+        width: 8px;
+        background: var(--color-blue);
+      }
+
+      &::before {
+        transform: rotate(45deg);
+        top: 42%;
+        left: 42%;
+      }
+
+      &::after {
+        transform: rotate(315deg);
+        left: 42%;
+        top: 53%;
+      }
+    }
+  }
+}
+
+.event__list {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 50px;
+
+  .event__item {
+    display: flex;
+    width: max-content;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0;
+    max-width: 300px;
+
+    .event_year {
+      font-family: 'Bebas-Neue';
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 30px;
+      color: var(--color-primary);
+    }
+
+    .event_description {
+      font-family: 'PT Sans', sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 30px;
+      color: var(--color-grey);
+    }
+  }
+}
+
+.event__list__wrapper {
+  position: relative;
+}
+
+
+@media (max-width: 500px) {
+  .event__list {
+    padding: 0 0 78px;
+
+    .event__item {
+      max-width: 100%;
+
+      .event_year {
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      .event_description {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}

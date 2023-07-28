@@ -1,0 +1,79 @@
+.timelapse__wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    height: 1px;
+    background: rgba(66, 86, 122, 0.1);
+    top: 26%;
+    left: 0;
+    right: 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    background: rgba(66, 86, 122, 0.1);
+    transform: rotate(90deg);
+    left: 0;
+    right: 0;
+  }
+
+  .change_timelapse__wrapper {
+    position: absolute;
+    top: -55%;
+  }
+
+  .timelapse__value {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    gap: 120px;
+    margin: 0 0 175px;
+    font-family: 'PT-Sans';
+    font-size: 200px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160px;
+
+    .times_start {
+      color: var(--color-primary);
+    }
+
+    .times_old {
+      color: var(--color-secondary);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .timelapse__wrapper {
+    margin: 0 0 20px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    .change_timelapse__wrapper {
+      display: none;
+    }
+
+    .timelapse__value {
+      width: 100%;
+      margin: 0;
+      padding: 0 0 57px;
+      gap: 33px;
+      font-size: 56px;
+      line-height: normal;
+      border-bottom: 1px solid #C7CDD9;
+    }
+  }
+}

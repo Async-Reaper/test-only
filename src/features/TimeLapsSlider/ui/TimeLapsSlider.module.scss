@@ -1,0 +1,155 @@
+.timelapse__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .timelapse__number {
+    font-family: 'PT-Sans';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--color-grey);
+  }
+
+  .timelapse__slider {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .slider__btn {
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--color-grey);
+    border-radius: 50%;
+
+    &.active {
+      &.back__arrow {
+        opacity: 0.5;
+        cursor: auto;
+      }
+
+      &.next__arrow {
+        opacity: 0.5;
+        cursor: auto;
+      }
+    }
+
+    &.back__arrow {
+      position: relative;
+
+      &::after,
+      &::before {
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 2px;
+        background: var(--color-grey);
+      }
+
+      &::before {
+        transform: rotate(135deg);
+        top: 41%;
+        left: 39%;
+      }
+
+      &::after {
+        transform: rotate(45deg);
+        top: 54%;
+        left: 40%;
+      }
+    }
+
+    &.next__arrow {
+      position: relative;
+
+      &::after,
+      &::before {
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 2px;
+        background: var(--color-grey);
+      }
+
+      &::before {
+        transform: rotate(45deg);
+        top: 42%;
+        left: 41%;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+        top: 54%;
+        left: 41%;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .timelapse__wrapper {
+    position: absolute;
+    bottom: -15px;
+    gap: 10px;
+
+    .timelapse__slider {
+      gap: 8px;
+    }
+
+    .slider__btn {
+      width: 25px;
+      height: 25px;
+
+      &.back__arrow {
+        position: relative;
+
+        &::after,
+        &::before {
+          position: absolute;
+          content: '';
+          width: 5px;
+          height: 2px;
+          background: var(--color-grey);
+        }
+
+        &::before {
+          transform: rotate(135deg);
+          top: 40%;
+          left: 38%;
+        }
+
+        &::after {
+          transform: rotate(45deg);
+          top: 51%;
+          left: 38%;
+        }
+      }
+
+      &.next__arrow {
+        position: relative;
+
+        &::after,
+        &::before {
+          position: absolute;
+          content: '';
+          width: 5px;
+          height: 2px;
+          background: var(--color-grey);
+        }
+
+        &::before {
+          transform: rotate(45deg);
+          top: 40%;
+          left: 41%;
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+          top: 51%;
+          left: 41%;
+        }
+      }
+    }
+  }
+}

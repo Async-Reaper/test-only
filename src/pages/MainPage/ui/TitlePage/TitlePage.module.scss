@@ -1,0 +1,34 @@
+.title_page {
+  display: flex;
+  align-items: end;
+  gap: 78px;
+  width: min-content;
+  font-family: 'PT-Sans';
+  font-weight: 700;
+  font-size: 56px;
+  color: var(--color-grey);
+  padding: 70px 0 0;
+  margin: 0 0 96px;
+
+  .mark {
+    background: linear-gradient(#3877EE, #EF5DA8);
+    height: 120px;
+    width: 5px;
+    position: absolute;
+    left: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .title_page {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0 0 56px;
+    padding: 0;
+    .mark {
+      display: none;
+    }
+  }
+}
