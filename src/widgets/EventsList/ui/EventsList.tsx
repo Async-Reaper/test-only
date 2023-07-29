@@ -18,7 +18,7 @@ const Component = () => {
    return (
       <>
          {
-            widthScreen < 500 ?
+            widthScreen < 600 ?
                <MobileComponent
                   events={events}
                /> :

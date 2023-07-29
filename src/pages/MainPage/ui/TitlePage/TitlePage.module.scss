@@ -6,6 +6,7 @@
   font-family: 'PT-Sans';
   font-weight: 700;
   font-size: 56px;
+  line-height: 67px;
   color: var(--color-grey);
   padding: 70px 0 0;
   margin: 0 0 96px;
@@ -19,6 +20,19 @@
   }
 }
 
+@media (max-width: 768px) {
+  .title_page {
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 50px;
+    margin: 0 0 56px;
+    .mark {
+      display: none;
+    }
+  }
+}
+
 @media (max-width: 500px) {
   .title_page {
     font-size: 20px;
@@ -27,8 +41,5 @@
     line-height: 24px;
     margin: 0 0 56px;
     padding: 0;
-    .mark {
-      display: none;
-    }
   }
 }

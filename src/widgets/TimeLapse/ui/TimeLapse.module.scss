@@ -50,7 +50,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 912px) {
   .timelapse__wrapper {
     margin: 0 0 20px;
 
@@ -65,6 +65,21 @@
     .change_timelapse__wrapper {
       display: none;
     }
+
+    .timelapse__value {
+      width: 100%;
+      margin: 0;
+      padding: 0 0 57px;
+      gap: 46px;
+      font-size: 100px;
+      line-height: normal;
+      border-bottom: 1px solid #C7CDD9;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .timelapse__wrapper {
 
     .timelapse__value {
       width: 100%;
